@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="side-container">
+        <div class="highscore-box">
+            <div class="head">HIGH SCORE</div>
+            <div class="score"></div>
+        </div>
+        <div class="score-box">
+            <div class="head">SCORE</div>
+            <div class="score"></div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+    <div class="status">
+        <input type="checkbox" id="dropdown" name="">
+        <div class="panel-head">options</div>
+        <hr>
+        <div class="panel">
+            Animation duration (ms):
+            <input type="number" class="animation-duration" placeholder="default = 150" value="150">
+            <hr>
+            Mode:
+            <select id="mode">
+                <option>Play</option>
+                <option>Replay</option>
+                <option>Random</option>
+            </select>
+            <br>
+            <div class="mode-normal" style="display: none;">
+                <input type="checkbox" id="use-seed">
+                Seed: <input type="text" id="seed" placeholder="seed..."> <br>
+                <br>
+            </div>
+            <div class="mode-replay" style="display: none;">
+                <input type="checkbox" class="save-highscore"> Save highscore
+                <textarea class="history" rows="5" placeholder="History to replay..."></textarea>
+            </div>
+            <div class="mode-random" style="display: none;">
+                <input type="checkbox" class="save-highscore"> Save highscore
+                <br>
+                <input type="checkbox" class="use-game-seed">
+                Game seed: <input type="text" class="game-seed" placeholder="game seed..."> <br>
+                <input type="checkbox" class="use-bot-seed">
+                Bot seed: <input type="text" class="bot-seed" placeholder="bot seed..."> <br>
+            </div>
+            <div class="controls">
+                <hr>
+                <button class="play">play</button>
+                <button class="pause">pause</button>
+                <button class="step">step</button>
+            </div>
+            <hr>
+            <button class="reset">Reset Game</button>
+            <hr>
+            history (click to copy):
+            <div class="history" title="History, click to copy"></div>
+            <input type="text" id="tmp" style="display: none;">
+        </div>
+    </div>
+    <script src="./rng.js"></script>
+    <script src="./2048.js"></script>
+    <script src="./web.js"></script>
+    <script src="./bot.js"></script>
+    <script src="./replay-bot.js"></script>
+    <script src="./random-bot.js"></script>
+    <script src="./game-controller.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
